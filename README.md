@@ -14,4 +14,4 @@ This is a template project for creating a single page web app using the followin
 
 
 
-> Written with [StackEdit](https://stackedit.io/).
+> Readme Written with [StackEdit](https://stackedit.io/).
