@@ -1,0 +1,43 @@
+$basic-slide-speed: $transition-med;
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> TRANSITION-LEFT
+.transition-left-enter {
+  position: absolute;
+  transition: all $basic-slide-speed ease-in;
+  @include transform(translate(1600px));
+}
+
+.transition-left-enter.transition-left-enter-active {
+  @include transform(translate(0));
+}
+
+.transition-left-leave {
+  position: absolute;
+  transition: all $basic-slide-speed ease-in;
+  @include transform(translate(0));
+}
+
+.transition-left-leave.transition-left-leave-active {
+  @include transform(translate(-1600px))
+}
+
+
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> TRANSITION-RIGHT
+.transition-right-enter {
+  position: absolute;
+  transition: all $basic-slide-speed ease-in;
+  @include transform(translate(-1600px));
+}
+
+.transition-right-enter.transition-right-enter-active {
+  @include transform(translate(0));
+}
+
+.transition-right-leave {
+  position: absolute;
+  transition: all $basic-slide-speed ease-in;
+  @include transform(translate(0));
+}
+
+.transition-right-leave.transition-right-leave-active {
+  @include transform(translate(1600px))
+}

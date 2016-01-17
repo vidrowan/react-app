@@ -1,0 +1,40 @@
+input {
+  color: $input-text-color;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+  -webkit-box-shadow:0 0 0 50px $input-autofill-color inset;
+  -webkit-text-fill-color: $input-text-color;
+}
+
+a {
+  cursor: pointer;
+}
+
+html, body, #react-main {
+  height: 100%;
+}
+
+button {
+  border: none;
+  background: none;
+  outline: none;
+}
+
+svg {
+  width: 1em;
+  height: 1em;
+  stroke-width: 1;
+  vertical-align: middle;
+}
+
+.svg-outline {
+  stroke: $color-black;
+  fill: none;
+}
+
+.svg-solid {
+  stroke: none;
+  fill: $color-black;
+}

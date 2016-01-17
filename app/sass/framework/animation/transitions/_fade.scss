@@ -1,0 +1,66 @@
+.fade-enter {
+  opacity: 0.01;
+  transition: opacity .5s ease-in;
+}
+
+.fade-enter.fade-enter-active {
+  opacity: 1;
+}
+
+.fade-leave {
+  opacity: 1;
+  transition: opacity .5s ease-in;
+}
+
+.fade-leave.fade-leave-active {
+  opacity: 0.01;
+}
+
+
+$fadeInEase: ease;//cubic-bezier(.5, .2, .2, 1.1);
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> fade-in-top
+.fade-in-top-enter {
+  transition: all $transition-med $fadeInEase;
+  opacity: 0;
+  @include transform3d(translate3d(0, -50px, 0));
+}
+
+.fade-in-top-enter.fade-in-top-enter-active {
+  opacity: 1;
+  @include transform3d(translate3d(0, 0, 0));
+}
+
+.fade-in-top-leave {
+  transition: all $transition-fast $fadeInEase;
+  opacity: 1;
+  @include transform3d(translate3d(0, 0, 0));
+}
+
+.fade-in-top-leave.fade-in-top-leave-active {
+  opacity: 0;
+  @include transform3d(translate3d(0, -10px, 0));
+}
+
+
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> fade-in-right
+.fade-in-right-enter {
+  transition: all $transition-med $fadeInEase;
+  opacity: 0;
+  @include transform3d(translate3d(100px, 0, 0));
+}
+
+.fade-in-right-enter.fade-in-right-enter-active {
+  opacity: 1;
+  @include transform3d(translate3d(0, 0, 0));
+}
+
+.fade-in-right-leave {
+  transition: all $transition-fast $fadeInEase;
+  opacity: 1;
+  @include transform3d(translate3d(0, 0, 0));
+}
+
+.fade-in-right-leave.fade-in-right-leave-active {
+  opacity: 0;
+  @include transform3d(translate3d(100px, 0, 0));
+}

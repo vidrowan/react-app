@@ -1,0 +1,29 @@
+$loading-bubble-ease: ease-in-out;
+$loading-bubble-dur: 1s;
+
+.loading-bubbles {
+  font-size: 1rem;
+
+  .loading-bubble {
+    @include inline-block(false);
+    @include border-radius(50%);
+    width: 0.5em;
+    height: 0.5em;
+
+    &:nth-child(2) {
+      margin: 0 0.5em;
+    }
+  }
+
+  .bubble1 {
+    @include animation(loading-bubbles $loading-bubble-dur $loading-bubble-ease infinite);
+  }
+
+  .bubble2 {
+    @include animation(loading-bubbles $loading-bubble-dur 0.2s $loading-bubble-ease infinite);
+  }
+
+  .bubble3 {
+    @include animation(loading-bubbles $loading-bubble-dur 0.4s $loading-bubble-ease infinite);
+  }
+}

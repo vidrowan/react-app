@@ -1,0 +1,204 @@
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> CUSTOM HR
+@mixin custom-hr($content: ' ', $color: $gray-lighter, $font-size: 1em, $background: $color-white) {
+
+  &:after {
+    content: $content;
+    position: relative;
+    top: -1.27em;
+    left: $padding-base;
+    padding: 0 $padding-sm;
+    background: $background;
+    color: $color;
+    font-size: $font-size;
+  }
+}
+
+
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> GRADIENTS
+@mixin gradient-mono($color, $deg: 90deg) {
+  $end-color: darken($color, 10%);
+
+  background-repeat: repeat-x;
+  background-image: -webkit-linear-gradient($deg, $color, $end-color); // Safari 5.1-6, Chrome 10+
+  background-image: -o-linear-gradient($deg, $color, $end-color); // Opera 12
+  background-image: linear-gradient($deg, $color, $end-color); // Standard, IE10, Firefox 16+, Opera 12.10+, Safari 7+, Chrome 26+
+}
+
+
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> ANIMATION
+// Useful for when you want to use shorthand syntax but do not wish to overwrite previous properties.
+// If you don't care about overwriting previous properties just use compass animation() mixin
+@mixin config-animation($args...) {
+  $argsMap: keywords($args);
+  @if map-has-key($argsMap, "name") { @include animation-name(map-get($argsMap, "name")) };
+  @if map-has-key($argsMap, "duration") { @include animation-duration(map-get($argsMap, "duration")) };
+  @if map-has-key($argsMap, "delay") { @include animation-delay(map-get($argsMap, "delay")) };
+  @if map-has-key($argsMap, "timing") { @include animation-timing-function(map-get($argsMap, "timing")) };
+  @if map-has-key($argsMap, "iteration") { @include animation-iteration-count(map-get($argsMap, "iteration")) };
+  @if map-has-key($argsMap, "direction") { @include animation-direction(map-get($argsMap, "direction")) };
+  @if map-has-key($argsMap, "fill-mode") { @include animation-fill-mode(map-get($argsMap, "fill-mode")) };
+  @if map-has-key($argsMap, "play-state") { @include animation-play-state(map-get($argsMap, "play-state")) };
+
+}
+
+
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> COLORS
+@mixin darken-color($color, $amount) {
+  @if ($amount == 1) {
+    #{$color + "-darken-1"}: mix(black, $color, 13%);
+  }
+  @else if ($amount == 2) {
+    #{$color + "-darken-2"}: mix(black, $color, 23%);
+  }
+  @else if ($amount == 3) {
+    #{$color + "-darken-3"}: mix(black, $color, 30%);
+  }
+  @else if ($amount == 4) {
+    #{$color + "-darken-4"}: mix(black, $color, 40%);
+  }
+}
+
+@mixin lighten-color($color, $amount) {
+  @if ($amount == 1) {
+    #{$color + "-lighten-1"}: mix(white, $color, 13%);
+  }
+  @else if ($amount == 2) {
+    #{$color + "-lighten-2"}: mix(white, $color, 23%);
+  }
+  @else if ($amount == 3) {
+    #{$color + "-lighten-3"}: mix(white, $color, 30%);
+  }
+  @else if ($amount == 4) {
+    #{$color + "-lighten-4"}: mix(white, $color, 40%);
+  }
+}
+
+@mixin input-autofill-color($bg-color, $text-color: $input-text-color) {
+  input:-webkit-autofill,
+  input:-webkit-autofill:focus {
+    -webkit-box-shadow:0 0 0 50px $bg-color inset;
+    -webkit-text-fill-color: $text-color;
+  }
+}
+
+
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Breakpoints
+@mixin respond-to($context) {
+
+  // Extra Small Screens, less than 480px
+  @if $context == "<xs" {
+    @media (max-width: $breakpoint-xs - 1) {
+      @content
+    }
+  }
+  @if $context == "xs" {
+    @media (min-width: 100px) and (max-width: $breakpoint-xs - 1) {
+      @content
+    }
+  }
+  @if $context == "xs>" {
+    @media (min-width: 100px) {
+      @content
+    }
+  }
+
+  // Small Screens, between 480px and 768px
+  @if $context == "<sm" {
+    @media (max-width: $breakpoint-sm - 1) {
+      @content
+    }
+  }
+  @if $context == "sm" {
+    @media (min-width: $breakpoint-xs) and (max-width: $breakpoint-sm - 1) {
+      @content
+    }
+  }
+  @if $context == "sm>" {
+    @media (min-width: $breakpoint-xs) {
+      @content
+    }
+  }
+
+  // Medium Screens, between 768px and 992px
+  @if $context == "<md" {
+    @media (max-width: $breakpoint-md - 1) {
+      @content
+    }
+  }
+  @if $context == "md" {
+    @media (min-width: $breakpoint-sm) and (max-width: $breakpoint-md - 1) {
+      @content
+    }
+  }
+  @if $context == "md>" {
+    @media (min-width: $breakpoint-sm) {
+      @content
+    }
+  }
+
+  // Large Screens, between 992px and 1200px
+  @if $context == "<lg" {
+    @media (max-width: $breakpoint-lg - 1) {
+      @content
+    }
+  }
+  @if $context == "lg" {
+    @media (min-width: $breakpoint-md) and (max-width: $breakpoint-lg - 1) {
+      @content
+    }
+  }
+  @if $context == "lg>" {
+    @media (min-width: $breakpoint-md) {
+      @content
+    }
+  }
+
+  // Extra Large Screens, more than 1200px
+  @if $context == "<xl" {
+    @media (max-width: $breakpoint-xl) {
+      @content
+    }
+  }
+  @if $context == "xl" {
+    @media (min-width: $breakpoint-lg) and (max-width: $breakpoint-xl) {
+      @content
+    }
+  }
+  @if $context == "xl>" {
+    @media (min-width: $breakpoint-xl) {
+      @content
+    }
+  }
+}
+
+// remove the blue div hightlighting when double clicking
+@mixin no-hightlight() {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+@mixin flex-row($align-items: flex-start, $justify: center, $align-content: flex-start) {
+  @include display-flex();
+  @include flex-direction(row);
+  @include align-items($align-items);
+  @include justify-content($justify);
+  @include align-content($align-content);
+}
+
+@mixin flex-col($align-items: flex-start, $justify: center, $align-content: flex-start) {
+  @include display-flex();
+  @include flex-direction(column);
+  @include align-items($align-items);
+  @include justify-content($justify);
+  @include align-content($align-content);
+}
+
+@mixin interact() {
+  &:focus, &:hover, &:active {
+    @content
+  }
+}

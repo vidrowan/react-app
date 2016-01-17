@@ -1,0 +1,91 @@
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> TEXT
+
+//alignment
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-left {
+  text-align: left;
+}
+
+//transform
+.uppercase {
+  text-transform: uppercase;
+}
+
+.text-light {
+  font-weight: 200;
+}
+
+
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> POSITIONING
+.center-vertical {
+  position: relative;
+  top: 50%;
+}
+
+.cell-middle {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.flex-row {
+  @include flex-row();
+}
+
+.flex-col {
+  @include flex-col();
+}
+
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> COLORS
+
+//BGS
+.bg-color-primary {
+  background-color: $color-primary;
+}
+
+.bg-color-secondary {
+  background-color: $color-secondary;
+}
+
+.bg-color-blue {
+  background-color: $color-blue-lt;
+}
+
+.bg-color-green {
+  background-color: $color-green;
+}
+
+.bg-color-black {
+  background-color: $color-black;
+}
+
+.icon-fill-black {
+  fill: $color-black;
+
+  svg {
+    fill: $color-black;
+  }
+}
+
+.text-black {
+  color: $color-black;
+}
+
+.foreground-black {
+  @extend .icon-fill-black;
+}
+
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> DISPLAY
+.hidden {
+  visibility: hidden;
+}
+
+.clickable {
+  cursor: pointer;
+}

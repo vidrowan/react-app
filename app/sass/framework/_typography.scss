@@ -1,0 +1,166 @@
+/* Set imported fonts here */
+
+//restyle anchor elements
+a {
+  color: $color-link;
+
+  &:hover,
+  &:active,
+  &:focus {
+    text-decoration: none;
+    color: $color-link-active;
+  }
+
+  &:hover {
+    outline: 0;
+  }
+
+  h1,h2,h3,h4,h5,h6,p {
+    @include inline-block;
+  }
+}
+
+//reset margin and padding on text elements
+p, span, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+/* Set document base font sizes. used as a base for component font sizes */
+html {
+  @include respond-to('xl') {
+    font-size: $font-size-base;
+  }
+  @include respond-to('lg') {
+    font-size: $font-size-base * 0.9;
+  }
+  @include respond-to('md') {
+    font-size: $font-size-base * 0.75;
+  }
+  @include respond-to('sm') {
+    font-size: $font-size-base * 0.6;
+  }
+  @include respond-to('xs') {
+    font-size: $font-size-base * 0.5;
+  }
+}
+
+// <i> <b> <strong> <em>
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-family-heading;
+
+  b, strong {
+    font-weight: $font-weight-bold-heading;
+  }
+
+  i, em {
+    font-style: italic;
+  }
+}
+
+p {
+  font-family: $font-family-base;
+
+  b, strong {
+    font-weight: $font-weight-bold-text;
+  }
+
+  i, em {
+    font-style: italic;
+  }
+}
+
+/* Type will scale with document */
+h1 {
+  font-size: 3.8em;
+  font-weight: 600;
+  line-height: 1.3;
+  margin-bottom: .16em;
+  margin-top: .5em;
+}
+h2 {
+  font-size: 2.8em;
+  font-weight: 600;
+  line-height: 1.3;
+  margin-bottom: .15em;
+  margin-top: .6em;
+}
+h3 {
+  font-size: 2em;
+  font-weight: 600;
+  line-height: 1.3;
+  margin-bottom: .14em;
+  margin-top: .7em;
+}
+h4 {
+  font-size: 1.9em;
+  font-weight: 600;
+  line-height: 1.3;
+  margin-bottom: .14em;
+  margin-top: .77em;
+}
+h5 {
+  font-size: 1.5em;
+  font-weight: 600;
+  line-height: 1.3;
+  margin-bottom: .15em;
+  margin-top: .9em;
+}
+h6 {
+  font-size: 1em;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: .3em;
+  margin-top: 1.5em;
+}
+p {
+  font-weight: 400;
+  font-size: 1em;
+  line-height: 1.5;
+  margin-bottom: 1em;
+}
+
+blockquote {
+  quotes: "“" "”" "‘" "’";
+  font-size: 1em;
+  position: relative;
+
+  p {
+    font-size: 1.1em;
+    color: $gray-light;
+    text-indent: 1.5em;
+
+    &:before {
+      content: open-quote;
+      position: absolute;
+      top: -0.4em;
+      left: -0.5em;
+      font-size: 3em;
+      color: $color-primary;
+    }
+
+    &:after {
+      content: close-quote;
+      position: absolute;
+      bottom: -0.7em;
+      margin-left: -0.3em;
+      font-size: 3em;
+      color: $color-primary;
+    }
+  }
+}
+
+//section bg label
+.large-bg-text {
+  position: absolute;
+  line-height: 0.9;
+  letter-spacing: -15px;
+  left: -0.1em;
+  top: 0.05em;
+  font-size: 24em;
+  font-weight: 900;
+  text-transform: uppercase;
+  opacity: 0.05;
+  font-family: $font-family-heading;
+  color: lighten($color-primary, 65%);
+}

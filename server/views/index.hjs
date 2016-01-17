@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>React 14.4 Template</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href='https://fonts.googleapis.com/css?family=Oxygen:400,300,700|family=Lato:300,900' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+        <section id="reactRoot"></section>
+        <script src="/js/build/bundle.public.js"></script>
+    </body>
+</html>

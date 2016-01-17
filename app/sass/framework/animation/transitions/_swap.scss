@@ -1,0 +1,24 @@
+
+$swapEase: ease-in-out;//cubic-bezier(.5, .2, .2, 1.1);
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> swap-right
+.swap-right-enter {
+  position: absolute;
+  transition: all $transition-med $swapEase;
+  @include transition-delay(0.3s);
+  @include transform(translate3d(1600px, 0, 0));
+}
+
+.swap-right-enter.swap-right-enter-active {
+  @include transition-delay(0);
+  @include transform(translate3d(0, 0, 0));
+}
+
+.swap-right-leave {
+  position: absolute;
+  transition: all $transition-fast $swapEase;
+  @include transform(translate3d(0, 0, 0));
+}
+
+.swap-right-leave.swap-right-leave-active {
+  @include transform(translate3d(1600px, 0, 0));
+}

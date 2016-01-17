@@ -1,0 +1,112 @@
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> LAYOUT
+$body-bg:               #FEFFFF;
+$text-color:            #21211F;
+
+//Navbar height
+$navbar-base-height: 3.333rem;
+$navbar-min-height: 2.222rem;
+
+//Margin
+$margin-base: .883em;
+$margin-xl: $margin-base * 4;
+$margin-lg: $margin-base * 2;
+$margin-md: $margin-base * 1;
+$margin-sm: ($margin-base * .5);
+$margin-xs: ($margin-base * .3);
+
+//Padding
+$padding-base: .883em;
+$padding-xl: $padding-base * 4;
+$padding-lg: $padding-base * 2;
+$padding-md: $padding-base * 1;
+$padding-sm: ($padding-base * .5);
+$padding-xs: ($padding-base * .3);
+
+//Z-index
+$z-index-back: 1000;
+$z-index-mid: 2000;
+$z-index-fore: 3000;
+$z-index-overlay: 4000;
+
+//panel widths
+$panel-width-sm: 16.667em;
+$panel-width-md: 25em;
+$panel-width-lg: 38em;
+$panel-width-xl: 50em;
+
+//breakpoints
+$breakpoint-xl: 1450px;
+$breakpoint-lg: 1200px;
+$breakpoint-md: 992px;
+$breakpoint-sm: 768px;
+$breakpoint-xs: 480px;
+
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> COLOR
+$color-black: #21211F;
+$color-white: #fefefe;
+$color-gray-dark: #455C7B;
+
+$color-red: #EE694F;
+$color-red-lt: lighten($color-red, 10%);
+$color-red-dk: #DA727E;
+$color-blue: #3498DB;
+$color-blue-lt: #65cdf4;
+$color-blue-dk: #455C7B;
+$color-yellow: #FFBC67;
+$color-green: #0fd8b8;
+
+$color-warning: #DB4442;
+
+//palette one
+$color-palette1-1: #69D2E7;
+$color-palette1-2: #A7DBD8;
+$color-palette1-3: #E0E4CC;
+$color-palette1-4: #F38630;
+$color-palette1-5: #FA6900;
+$color-palette1-6: #FF4E50;
+$color-palette1-7: #F9D423;
+
+
+//main site palette
+$color-primary: $color-palette1-1;
+$color-secondary: $color-green;
+$color-accent-1: $color-palette1-3;
+$color-accent-2: $color-palette1-2;
+
+$color-primary-dk: mix(black, $color-primary, 25%);
+$color-secondary-dk: mix(black, $color-secondary, 25%);
+
+//Text
+$text-color-subtle: gray;
+$text-color: #383D37;
+$text-color-heading: $text-color;
+$color-link: $text-color;
+$color-link-active: lighten(#383D37, 15%);
+
+//inputs
+$input-text-color: $text-color;
+$input-autofill-color: $color-white;
+
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> BOX SHADOW
+$box-shadow-down-lt: 0px 5px 15px -2px rgba(0,0,0,0.1);
+$box-shadow-inset-1: inset 0px 0px 15px 0px rgba(0,0,0,0.1);
+
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> TYPOGRAPHY
+$font-family-sans-serif:  'Oxygen', Helvetica, Arial, sans-serif;
+$font-family-heading:    'Lato', Helvetica, Arial, sans-serif;
+$font-family-base: $font-family-sans-serif;
+$font-size-base: 18px;
+$font-weight-bold: 700;
+$font-weight-bold-heading: $font-weight-bold;
+$font-weight-light-text: 300;
+$font-weight-medium-text: 400;
+$font-weight-light-heading: 300;
+$font-weight-bold-text: 900;
+
+//space-before / space-after
+$space-after-h1: .2em;
+
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> ANIMATION
+$transition-fast: .1s;
+$transition-med: .25s;
+$transition-slow: .5s

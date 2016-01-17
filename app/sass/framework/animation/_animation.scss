@@ -1,0 +1,30 @@
+@import "transitions/transitions-all";
+@import "keyframes/keyframes-all";
+
+
+.animated-slow {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.animated-fast {
+  -webkit-animation-duration: 0.25s;
+  animation-duration: 0.25s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.animated-faster {
+  -webkit-animation-duration: 0.15s;
+  animation-duration: 0.15s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+// Compass animation mixin: animation(name, duration, delay, timing, iteration, direction, fill-mode, play-state)
+// For shorthand animation mixin that doesn't overwrite previous properties use config-animation()
+.shake-subtle {
+  @include animation(shake-subtle .5s ease-out);
+}
