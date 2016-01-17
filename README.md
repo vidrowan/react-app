@@ -1,9 +1,6 @@
 React 14.4 Template
 ===========================
-_______
-
 This is a template project for creating a single page web app using the following technologies:
-------------------------------------------------------------------------
 
  - Node
  - Express
