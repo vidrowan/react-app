@@ -2,7 +2,7 @@ var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
 var webpack = require('webpack');
-var config = require('../webpack.config');
+var config = require('../webpack.config.dev');
 var compiler = webpack(config);
 
 var app = express();
@@ -40,7 +40,7 @@ app.use(function(req, res, next) {
         // insert auth here
 
         res.render('public', {
-            isDevelopment: app.get('env') === 'development'
+            isDev: app.get('env') === 'development'
         });
     }
 
