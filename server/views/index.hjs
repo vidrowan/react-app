@@ -6,8 +6,8 @@
         <link href='https://fonts.googleapis.com/css?family=Oxygen:400,300,700|family=Lato:300,900' rel='stylesheet' type='text/css'>
     </head>
     <body>
-        <section id="reactRoot"></section>
-        {{^isDev}}
+        <section id="react-root"></section>
+        {{#isDev}}
         <script src="/static/bundle.js"></script>
         {{/isDev}}
     </body>

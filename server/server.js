@@ -39,9 +39,7 @@ app.use(function(req, res, next) {
     if (/^(\/[a-zA-Z0-9-_]*)+$/.test(path)) {
         // insert auth here
 
-        res.render('public', {
-            isDev: app.get('env') === 'development'
-        });
+        return res.render('index', { isDev: app.get('env') === 'development' });
     }
 
     next();
