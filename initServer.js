@@ -1,13 +1,7 @@
 process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 process.env.INSTANCE_NAME = process.env.INSTANCE_NAME || 'dev';
 
-var app;
-if (process.env.NODE_ENV === 'development') {
-    app = require('./server.dev.js');
-}
-else {
-    app = require('./server.js');
-}
+var app = require('./server/server');
 
 var appPort = process.env.PORT || 3000;
 app.set('port', appPort);
