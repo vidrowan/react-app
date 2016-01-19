@@ -11,7 +11,7 @@ ADD package.json package.json
 RUN npm install --unsafe-perm  # See https://github.com/npm/npm/issues/2984
 COPY . /
 RUN rm -rf .git
-RUN npm build:webpack
+RUN npm run build:webpack
 
 EXPOSE 3000
 
