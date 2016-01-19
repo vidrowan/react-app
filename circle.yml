@@ -2,6 +2,10 @@ machine:
   services:
     - docker
 
+test:
+  override:
+    - cd app; mocha
+
 deployment:
   hub:
     branch: master

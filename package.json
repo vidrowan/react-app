@@ -41,6 +41,7 @@
     "hjs": "0.0.6",
     "immutable": "^3.7.5",
     "jquery": "^2.2.0",
+    "mocha": "^2.3.4",
     "react": "^0.14.6",
     "react-dom": "^0.14.6",
     "react-redux": "^4.0.0",
