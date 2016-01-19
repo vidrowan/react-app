@@ -7,8 +7,6 @@
     </head>
     <body>
         <section id="react-root"></section>
-        {{#isDev}}
         <script src="/static/bundle.js"></script>
-        {{/isDev}}
     </body>
 </html>
