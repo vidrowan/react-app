@@ -4,7 +4,7 @@ var webpack = require('webpack');
 module.exports = {
     devtool: 'sourcemaps',
     entry: [
-        './app/entry.js'
+        'app/entry.js'
     ],
     output: {
         path: path.join(__dirname, 'server/public/js/'),
