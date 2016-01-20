@@ -6,7 +6,7 @@ module.exports = {
     entry: [
         'webpack-hot-middleware/client',
         'webpack/hot/only-dev-server',
-        path.join(__dirname, 'app/entry.js')
+        './app/entry.js'
     ],
     output: {
         path: path.join(__dirname, 'server/public/js/'),
