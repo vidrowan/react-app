@@ -2,8 +2,9 @@ var path = require('path');
 var webpack = require('webpack');
 
 module.exports = {
+    devtool: 'eval',
     entry: [
-        path.join(__dirname, 'app/entry.js')
+        './app/entry'
     ],
     output: {
         path: path.join(__dirname, 'server/public/js/'),
