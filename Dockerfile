@@ -7,10 +7,10 @@ ENV NODE_ENV production
 
 WORKDIR /
 
-COPY package.json /package.json
+COPY package.json package.json
 RUN npm install --unsafe-perm  # See https://github.com/npm/npm/issues/2984
 
-COPY . /
+COPY . 
 RUN npm run build
 RUN rm -rf .git
 
