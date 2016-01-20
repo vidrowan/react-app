@@ -25,7 +25,7 @@ module.exports = {
         })
     ],
     resolve: {
-        // Allow to omit extensions when requiring these files
+        root: path.join(__dirname, 'node_modules'),
         extensions: ['', '.js', '.jsx']
     },
     module: {
