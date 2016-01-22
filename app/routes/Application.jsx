@@ -1,14 +1,12 @@
 import React from 'react';
-import applicationStyles from './application.scss';
+import applicationStyles from './Application_styles';
 
 const Application = React.createClass({
 
     render() {
         return (
             <div id="main-application">
-                <div className="title">
-                    Main Application Routes
-                </div>
+                {this.props.children}
             </div>
         )
     }

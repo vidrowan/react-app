@@ -18,8 +18,8 @@ module.exports = {
         new webpack.NoErrorsPlugin()
     ],
     resolve: {
-        // Allow to omit extensions when requiring these files
-        extensions: ['', '.js', '.jsx']
+        root: path.join(__dirname, 'node_modules'),
+        extensions: ['', '.js', '.jsx', '.scss']
     },
     module: {
         loaders: [{
