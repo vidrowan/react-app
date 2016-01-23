@@ -44,5 +44,8 @@ module.exports = {
             test: /\.css$/,
             loader: 'style-loader!css-loader'
         }]
+    },
+    sassLoader: {
+        includePaths: [path.resolve(__dirname, './scss')]
     }
 };
