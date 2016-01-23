@@ -5,8 +5,6 @@ machine:
     - docker
 
 test:
-  pre:
-    - npm install
   override:
     - ./node_modules/.bin/jest
 
