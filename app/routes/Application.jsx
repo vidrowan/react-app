@@ -6,6 +6,7 @@ const Application = React.createClass({
     render() {
         return (
             <div id="main-application">
+                Application Route...
                 {this.props.children}
             </div>
         )
