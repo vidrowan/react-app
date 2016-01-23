@@ -1,5 +1,5 @@
 import React from 'react';
-import applicationStyles from './Application_styles';
+import applicationStyles from './Application_styles.scss';
 
 const Application = React.createClass({
 
