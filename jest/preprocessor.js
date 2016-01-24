@@ -11,7 +11,7 @@ module.exports = {
             src = babelJest.process(src, filename);
             src = webpackAlias.process(src, filename);
         }
-        
+
         return src;
     }
 };

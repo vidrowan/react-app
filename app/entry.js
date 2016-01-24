@@ -6,5 +6,4 @@ import createBrowserHistory from 'history/lib/createBrowserHistory';
 
 let history = createBrowserHistory();
 
-console.log('app routes: ', AppRoutes);
 ReactDOM.render(<Router history={history}>{AppRoutes}</Router>, document.getElementById('react-root'));

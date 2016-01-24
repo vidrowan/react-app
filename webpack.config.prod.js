@@ -26,7 +26,7 @@ module.exports = {
     ],
     resolve: {
         root: path.join(__dirname, 'node_modules'),
-        extensions: ['', '.js', '.jsx', 'scss']
+        extensions: ['', '.js', '.jsx', '.scss']
     },
     module: {
         loaders: [{
