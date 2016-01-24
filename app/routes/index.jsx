@@ -1,9 +1,14 @@
 import React from 'react';
 import { Route } from 'react-router';
-import Application from './Application.jsx';
+
+import Application from 'app/routes/Application.jsx';
 
 
-const AppRoutes = <Route path="/" component={Application} />;
+const AppRoutes = (
+    <Route path="/" component={Application}>
+
+    </Route>
+);
 
 
 export default AppRoutes;

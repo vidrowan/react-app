@@ -8,6 +8,7 @@
     "url": "git@github.com:andrewgrewell/react-app.git"
   },
   "scripts": {
+    "postinstall": "node -e  \" try { require('fs').symlinkSync('../app', 'node_modules/~', 'dir') } catch(e) { if (e.code !== 'EEXIST') { console.log('Couldn\\'t create a symlink in node_modules:'); console.log(e.message); } } \"",
     "clean": "rimraf dist",
     "build": "NODE_ENV=production webpack --config webpack.config.prod.js --display-error-details",
     "start": "node initServer.js",
