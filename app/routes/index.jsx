@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route } from 'react-router';
 
-import Application from 'app/routes/Application.jsx';
+import Application from '/app/routes/Application.jsx';
 
 
 const AppRoutes = (
